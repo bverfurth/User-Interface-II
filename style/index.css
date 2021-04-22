@@ -99,6 +99,8 @@ h1{
     display: flex;
     text-align: center;
     justify-content: center;
+    font-size: 1.10rem;
+    letter-spacing: .08rem;
     background-color: #BDC7BF;
     border-radius: 1.25rem;
     padding: 0.625rem;
@@ -216,7 +218,50 @@ h1{
 footer{
     display: flex;
     justify-content: center;
-    background-color: #718475;
+    background-color: #5E6E60;
     padding: 2.5rem;
     margin: 0.625rem;
+    border-radius: 1.25rem;
+}
+
+@media (max-width: 1000px){
+.right-box{
+    flex-direction: column;
+    align-items: center;
+    }
+    .Image-Header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-section{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .bottom-section{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 500px){
+    .right-box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Image-Header{
+        flex-direction: column;
+        align-items: inherit;
+    }
+    .top-section{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .bottom-section{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .top-buttons{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
