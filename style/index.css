@@ -55,20 +55,26 @@ table {
     text-decoration: none;
     resize: vertical;
     resize: horizontal;
-    overflow: visible;}
+    overflow: visible;
+    outline: 1px solid red;
+}
 html{
     max-width: 1500px;
 }
-.Image-Header{
+img{
     display: flex;
     flex-direction: row;
-    width: 7rem;
-    height: 18rem;
+    justify-content: left;
+    float: left;
+    width: 20rem;
+    height: 12rem;
+    padding: 1rem auto;
 }
 h1{
     display: flex;
     text-align:center;
     justify-content: center;
+    align-content: flex-end;
     background-color: #BDC7BF;
     border-radius: 1.25rem;
     color: black;
@@ -79,24 +85,18 @@ h1{
     margin-left: 1rem;
     width: 15rem;
 }
-.right-box{
+.right-box div{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-}
-.right-box a{
-    background-color: #364542;
-    color: white;
-    border-radius: 1.25rem;
-    padding: 0.5rem;
-    width: 8rem;
+    justify-content: right;
+    align-content: right;
 }
 h2{
     display: flex;
+    flex-direction: row;
     text-align: center;
-    word-wrap: inherit;
-    justify-content: baseline;
+    text-align: center;
+    justify-content:right;
     font-size: 1.10rem;
     letter-spacing: .08rem;
     background-color: #BDC7BF;
@@ -104,10 +104,25 @@ h2{
     padding: 0.625rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 10rem;
+
 }
+.right-box a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-color: #364542;
+    color: white;
+    border-radius: 1.25rem;
+    padding: 0.5rem;
+    width: 8rem;
+}
+
 .right-box p{
     display: flex;
     flex-direction: row;
+    justify-content: right;
     word-wrap: normal;
     font-size: 1.10rem;
     letter-spacing: .08rem;
@@ -116,7 +131,7 @@ h2{
     padding: 0.625rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-
+    width: 35rem;
 }
 .top-buttons nav {
     display: flex;
@@ -135,6 +150,11 @@ h2{
 .top-section{
     display: flex;
     flex-direction: row;
+}
+.top-section img{
+    width: 10.5rem;
+    height:8rem;
+    padding: 0.625rem;
 }
 .top-section a{
     display: flex;
@@ -187,11 +207,7 @@ h2{
     flex-direction: column;
   align-items: center;
 }
-.top-section img{
-    width: 10.5rem;
-    height:8rem;
-    padding: 0.625rem;
-}
+
 .bottom-section{
     display:flex;
     flex-direction: row;
@@ -230,58 +246,76 @@ footer{
     border-radius: 1.25rem;
 }
 
-/*@media (max-width: 800px){
-.right-box{
+@media (max-width: 800px){
+    .right-box{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         align-content: center;
         text-align: center;
+        flex-wrap: auto;
+        margin: 0 auto;
     }
+    .right-box p{
+        word-wrap: normal;
+        width: 20rem;
+    }
+    .right-box div{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+}
     .top-section{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
         align-content: center;
         }
-    }
     .top-buttons a{ 
         display: flex;
         flex-direction: column;
-        align-content: center;
         align-content: center;
         max-width: 5rem;
     }
     .bottom-section{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: right;
         align-content: center;
+        
         }
-    .Image-Header img{
+    .Image-Header{
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
         align-content: center;
+        height: 15rem;
+}
+    .Image-Header img{
+    margin: 0 auto;
 }
     .top-buttons a{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: 0 auto;
        
     }
     .top-buttons h1{
         display: flex;
         flex-direction: column;
         justify-content: center; 
+        margin: 0 auto;
     }
     footer{
        display: flex;
        flex-direction: row;
        justify-content: center;
+       align-content: center;
     }
+}
 
 @media (max-width: 500px){
     .top-buttons{
@@ -290,17 +324,19 @@ footer{
         justify-content: space-evenly;
         align-content: space-around;
     }
-    .Image-Header img{
+    .Image-Header{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 20rem;
-        max-height: 13.5rem;
+        align-content: center;
     }
     .bottom-section{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .right-box p{
+        width: 18rem;
     }
     footer{
     display: flex;
