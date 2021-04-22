@@ -49,23 +49,21 @@ table {
 
 *{
     padding:0.125rem;
-    max-width: auto;
+    margin: 0 auto;
     min-width: auto;
     background-color: #6C8984;
     text-decoration: none;
     resize: vertical;
     resize: horizontal;
-    overflow: visible;
-}
-body img{
-    width: 31.25rem;
-    height: 18.75rem;
-    padding: 0.625rem;
+    overflow: visible;}
+html{
+    max-width: 1500px;
 }
 .Image-Header{
     display: flex;
     flex-direction: row;
-    color: black;
+    width: 7rem;
+    height: 18rem;
 }
 h1{
     display: flex;
@@ -83,9 +81,8 @@ h1{
 }
 .right-box{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
 }
 .right-box a{
@@ -95,10 +92,11 @@ h1{
     padding: 0.5rem;
     width: 8rem;
 }
-.right-box p{
+h2{
     display: flex;
     text-align: center;
-    justify-content: center;
+    word-wrap: inherit;
+    justify-content: baseline;
     font-size: 1.10rem;
     letter-spacing: .08rem;
     background-color: #BDC7BF;
@@ -107,19 +105,26 @@ h1{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.top-buttons{
+.right-box p{
+    display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
-    margin-left: 1rem;
-    padding-top: 1rem;
+    word-wrap: normal;
+    font-size: 1.10rem;
+    letter-spacing: .08rem;
+    background-color: #BDC7BF;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
 }
-.top-buttons nav{
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
-.Project-1 a{
-    text-align: center;
+.top-buttons nav {
+    display: flex;
+    flex-direction: row;
+    align-content: left;
+    justify-content: left;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 .top-buttons nav a{
     background-color: #364542;
@@ -137,7 +142,7 @@ h1{
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    width: 12rem;
+    width: 8rem;
     background-color: #364542;
     color: white;
     border-radius: 1.25rem;
@@ -183,12 +188,12 @@ h1{
   align-items: center;
 }
 .top-section img{
-    width: 20.5rem;
-    height:15.625rem;
+    width: 10.5rem;
+    height:8rem;
     padding: 0.625rem;
 }
 .bottom-section{
-    display: flex;
+    display:flex;
     flex-direction: row;
 }
 .bottom-section a{
@@ -198,14 +203,14 @@ h1{
     text-align: center;
     justify-content: center;
     padding: 0.5rem;
-    width: 12rem;
+    width: 8rem;
     background-color: #364542;
     color: white;
     border-radius: 1.25rem;
 }
 .bottom-section img{
-    width: 20.5rem;
-    height: 15.625rem;
+    width: 10.5rem;
+    height: 8rem;
     padding: 0.625rem;
 }
 #button5{
@@ -219,49 +224,87 @@ footer{
     display: flex;
     justify-content: center;
     background-color: #5E6E60;
+    max-width: 51rem;
     padding: 2.5rem;
     margin: 0.625rem;
     border-radius: 1.25rem;
 }
 
-@media (max-width: 1000px){
+/*@media (max-width: 800px){
 .right-box{
-    flex-direction: column;
-    align-items: center;
-    }
-    .Image-Header{
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
     }
     .top-section{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .bottom-section{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-}
-
-@media (max-width: 500px){
-    .right-box{
-        flex-direction: column;
-        align-items: center;
-    }
-    .Image-Header{
-        flex-direction: column;
-        align-items: inherit;
-    }
-    .top-section{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .bottom-section{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .top-buttons{
+        display: flex;
         flex-direction: column;
         justify-content: center;
+        align-content: center;
+        }
+    }
+    .top-buttons a{ 
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-content: center;
+        max-width: 5rem;
+    }
+    .bottom-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        }
+    .Image-Header img{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-content: center;
+}
+    .top-buttons a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    .top-buttons h1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+    footer{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+    }
+
+@media (max-width: 500px){
+    .top-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+    .Image-Header img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 20rem;
+        max-height: 13.5rem;
+    }
+    .bottom-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
     }
 }
