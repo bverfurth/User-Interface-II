@@ -129,6 +129,18 @@ table {
   text-decoration: none;
   border: 1px solid grey;
 }
+.Image-Container button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+.Image-Container2 button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
 .Image-Header {
   display: flex;
   justify-content: center;
@@ -234,6 +246,13 @@ nav a {
   margin-top: 5%;
   border-radius: 20px;
 }
+button {
+  background-color: #000000;
+  padding: 3% 4%;
+  font-size: 1rem;
+  color: #fbfffb;
+}
+
 #button5 {
   background-color: #aaaaaa;
   color: black;
